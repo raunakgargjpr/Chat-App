@@ -17,7 +17,7 @@ for(const param of searchParams) {
 const username = joinInfo[0][1];
 const room = joinInfo[1][1];
 
-const socket = io();
+const socket = io("ws://chat-app-six-kohl-29.vercel.app");
 
 // Join chatroom
 socket.emit('joinRoom', {username, room});
